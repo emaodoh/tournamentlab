@@ -16,6 +16,10 @@ def register_team(name):
     # Load tournament data
     data = load_teams()
 
+    for fixture in data["fixtures"]:
+        if fixture["status"] != "pending":
+            raise ValueError("Game have already started. New teams can not be added,clear the current fixtures and try again")
+
     # Validate team name
     name = name.strip()
 
