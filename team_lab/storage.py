@@ -1,7 +1,8 @@
 import json
 
 
-def save_teams(filename = "data/teams.json"):
+def save_teams(data ):
+    
     
     """
     Save a list of dictionaries to a JSON file.
@@ -10,11 +11,11 @@ def save_teams(filename = "data/teams.json"):
         data (list[dict]): The data to save.
         filename (str): The JSON file name.
     """
-    with open(filename, "w") as file:
+    with open("teams.json", "w") as file:
         json.dump(data, file, indent=4)
 
 
-def load_teams(filename = "data/teams.json"):
+def load_teams(filename = "teams.json"):
     """
     Load and validate a JSON file containing a list of dictionaries.
 
@@ -35,11 +36,6 @@ def load_teams(filename = "data/teams.json"):
     # Check that the top-level data is a list
     if not isinstance(data, dict):
         raise ValueError("JSON data must be a list")
-
-    # Check that every item in the list is a dictionary
-    # for item in data:
-    #     if not isinstance(item, dict):
-    #         raise ValueError("Every item must be a dictionary")
 
     return data
 

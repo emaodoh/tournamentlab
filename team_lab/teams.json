@@ -1,0 +1,30 @@
+{
+    "teams": [
+        {
+            "id": "T001",
+            "name": "angel_fc"
+        },
+        {
+            "id": "T002",
+            "name": "emmy_fc"
+        },
+        {
+            "id": "T003",
+            "name": "TC_fc"
+        },
+        {
+            "id": "T004",
+            "name": "LLLT_fc"
+        }
+    ],
+    "fixtures": [
+        {
+            "id": 1,
+            "home_team": "T001",
+            "away_team": "T002",
+            "status": "played",
+            "home_score": 9,
+            "away_score": 1
+        }
+    ]
+}
